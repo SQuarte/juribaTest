@@ -1,16 +1,21 @@
-import {
-  createFeatureSelector, createReducer,
-  createSelector,
-  on
-} from '@ngrx/store';
-import { YoutubeSearchItemI, YoutubeSearchItemSnippet } from '../../../core/models/youtube.models';
+import { createFeatureSelector, createReducer, createSelector, on } from '@ngrx/store';
+import { YoutubeSearchItemI } from '../../../core/models/youtube.models';
 import { YoutubeListPageActions } from './index';
 
 export const youtubeListPageFeatureKey = 'youtubeListPage';
 
 export interface State {
   loading: boolean;
-  items: any[];
+  items: YoutubeListStoreItemI[];
+}
+
+export interface YoutubeListStoreItemI {
+  id: string,
+  selection: boolean,
+  title: string,
+  publishedAt: string,
+  description: string,
+  thumbnails: any
 }
 
 const initialState: State = {

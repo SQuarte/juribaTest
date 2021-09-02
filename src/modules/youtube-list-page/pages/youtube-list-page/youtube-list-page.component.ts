@@ -1,8 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { YoutubeListPageProxy } from '../../__redux/youtube-list-page.proxy';
 import { CustomSelectionHeaderComponent } from './grid/custom-selection-header/custom-selection-header.component';
 import { CustomSelectionCellComponent } from './grid/custom-selection-cell/custom-selection-cell.component';
-import { Grid, GridApi } from 'ag-grid-community';
 import { CustomTitleCellComponent } from './grid/custom-title-cell/custom-title-cell.component';
 import { CustomThumbnailsCellComponent } from './grid/custom-thumbnails-cell/custom-thumbnails-cell.component';
 import { YoutubeUtils } from '../../../../core/utils/youtube.utils';
@@ -27,7 +26,7 @@ export class YoutubeListPageComponent implements OnInit {
     'customSelectionHeader': CustomSelectionHeaderComponent,
     'customSelectionCell' : CustomSelectionCellComponent
   };
-  private gridApi: GridApi;
+  private gridApi: any;
   private gridColumnApi: any;
 
   constructor(private youtubeListPageProxy: YoutubeListPageProxy) {

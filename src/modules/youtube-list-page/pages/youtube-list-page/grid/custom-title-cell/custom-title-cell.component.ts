@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { AgRendererComponent, IHeaderAngularComp } from 'ag-grid-angular';
-import { ICellRendererParams, IHeaderParams } from 'ag-grid-community';
+import { Component } from '@angular/core';
+import { AgRendererComponent } from 'ag-grid-angular';
+import { ICellRendererParams } from 'ag-grid-community';
 import { YoutubeUtils } from '../../../../../../core/utils/youtube.utils';
 
 @Component({
@@ -9,8 +9,8 @@ import { YoutubeUtils } from '../../../../../../core/utils/youtube.utils';
   styleUrls: ['./custom-title-cell.component.scss']
 })
 export class CustomTitleCellComponent implements AgRendererComponent {
-  url: string;
-  title: string;
+  url: string = '';
+  title: string = '';
 
   constructor() { }
 
