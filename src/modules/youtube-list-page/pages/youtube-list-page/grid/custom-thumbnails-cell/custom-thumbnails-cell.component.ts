@@ -8,7 +8,7 @@ import { ICellRendererParams } from 'ag-grid-community';
   styleUrls: ['./custom-thumbnails-cell.component.scss']
 })
 export class CustomThumbnailsCellComponent implements AgRendererComponent  {
-  thumbnailUrl;
+  thumbnailUrl: string = '';
 
   constructor() { }
 
