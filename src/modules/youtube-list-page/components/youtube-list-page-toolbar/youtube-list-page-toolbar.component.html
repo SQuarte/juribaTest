@@ -1,0 +1,7 @@
+<div>
+  <button (click)="selectionModeChange.emit(!selectionMode)">
+    {{selectionMode ? 'disable selection mode' : 'enable selection mode'}}
+  </button>
+  <span style="margin-left: 10px"> Total <b>{{totalCount}}</b></span>
+  <span style="margin-left: 10px"> Selected items <b>{{selectedCount}}</b></span>
+</div>

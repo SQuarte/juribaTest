@@ -1,0 +1,19 @@
+<div style="margin-bottom: 10px">
+  <app-youtube-list-page-toolbar
+  [selectionMode]="selectionMode"
+  [totalCount]="itemsCount$ | async"
+  [selectedCount]="selectedItemsCount$ | async"
+  (selectionModeChange)="changeSelectionMode($event)"></app-youtube-list-page-toolbar>
+</div>
+<ag-grid-angular
+  style="width: 100%; height: 100%;"
+  class="ag-theme-alpine"
+  [rowData]="listItems"
+  [rowHeight]="100"
+  [frameworkComponents]="frameworkComponents"
+  [immutableData]="true"
+  [getRowNodeId]="getRowNodeId"
+  [allowContextMenuWithControlKey]="true"
+  [getContextMenuItems]="getContextMenuItems"
+  (gridReady)="onGridReady($event)">
+</ag-grid-angular>
