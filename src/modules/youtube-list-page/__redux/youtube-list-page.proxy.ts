@@ -6,6 +6,7 @@ import {
   selectRow
 } from './youtube-list-page.actions';
 import {
+  selectAllItemsSelected,
   selectYoutubeListData,
   selectYoutubeListDataCount,
   selectYoutubeListDataSelectedCount
@@ -18,6 +19,7 @@ export class YoutubeListPageProxy {
   listItems$ = this.store.select(selectYoutubeListData);
   itemsCount$ = this.store.select(selectYoutubeListDataCount)
   selectedItemsCount$ = this.store.select(selectYoutubeListDataSelectedCount);
+  allItemsSelected$ = this.store.select(selectAllItemsSelected);
 
   constructor(private store: Store<any>) { }
 

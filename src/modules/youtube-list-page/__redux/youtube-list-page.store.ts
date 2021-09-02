@@ -78,6 +78,11 @@ export const selectYoutubeListDataSelectedCount = createSelector(
 )
 
 
+export const selectAllItemsSelected = createSelector(
+  selectYoutubeListData,
+  (state) => state.every(item => item.selection)
+)
+
 
 function toData(res: YoutubeSearchItemI) {
   return {

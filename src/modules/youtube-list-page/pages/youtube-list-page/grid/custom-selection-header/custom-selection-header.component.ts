@@ -10,7 +10,7 @@ import { YoutubeListPageProxy } from '../../../../__redux/youtube-list-page.prox
 })
 export class CustomSelectionHeaderComponent  implements IHeaderAngularComp  {
   public params: any;
-  value = false;
+  value$ = this.youtubeListProxy.allItemsSelected$;
 
   constructor(private youtubeListProxy: YoutubeListPageProxy) {}
 
